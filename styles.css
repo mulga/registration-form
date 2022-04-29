@@ -1,0 +1,149 @@
+/* Montserrat */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-success: #28a744;
+  --color-danger: #dc3644;
+  --color-warning: #ffc109;
+  --color-info: #18a2b8;
+  --color-light: #f8f9fa;
+  --color-dark: #343a40;
+  --color-white: #ffff;
+  --color-gray: #ebebeb;
+  --color--orange: #ff6801;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--color-dark);
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  /* display: grid; */
+  /* align-items: center; */
+  /* justify-items: center; */
+  /* margin: 0 auto; */
+  /* padding: 0 20px; */
+}
+
+.flex {
+  display: flex;
+}
+
+/* register wrapper */
+
+.register-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: auto;
+  background-color: var(--color-white);
+}
+
+.register-image img {
+  /* background-image: url(""); */
+  height: auto;
+}
+
+.form-wrapper {
+  padding: 50px;
+}
+
+.form-title {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  width: 100%;
+}
+
+.form-group input,
+select {
+  padding: 0.7rem;
+  width: 100%;
+  border: 1px solid var(--color-gray);
+  border-radius: 3px;
+}
+
+input:focus,
+select:focus {
+  border: 1px solid var(--color--orange);
+  outline: none;
+}
+
+.row.flex {
+  gap: 0.8rem;
+}
+
+.row.gender {
+  display: flex;
+}
+
+.button-group {
+  text-align: right;
+}
+
+.btn {
+  font-family: inherit;
+
+  color: var(--color-white);
+  border: none;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  /**/
+}
+
+.primary {
+  background-color: var(--color--orange);
+}
+
+.primary:hover {
+  background-color: #cd5300;
+}
+
+.secondary {
+  background-color: var(--color-light);
+  color: var(--color-secondary);
+}
+
+.secondary:hover {
+  background-color: var(--color--orange);
+  color: var(--color-white);
+}
+
+@media (max-width: 995px) {
+  .register-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
