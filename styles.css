@@ -53,7 +53,7 @@ img {
 
 .register-wrapper {
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 50px auto 50px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: auto;
@@ -81,11 +81,20 @@ img {
   width: 100%;
 }
 
+.gender-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .form-group label {
   font-weight: 600;
   font-size: 0.9rem;
   margin-bottom: 0.3rem;
   width: 100%;
+}
+
+.form-text {
+  font-weight: 600;
 }
 
 .form-group input,
@@ -102,12 +111,22 @@ select:focus {
   outline: none;
 }
 
-.row.flex {
-  gap: 0.8rem;
+.row input {
 }
 
-.row.gender {
-  display: flex;
+.gender-wrapper {
+  margin-bottom: 1rem;
+}
+
+.row.flex {
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.gender-wrapper.flex {
+  align-items: center;
+  gap: 15px;
+  /* justify-content: space-between; */
 }
 
 .button-group {
