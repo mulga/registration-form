@@ -7,7 +7,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
 
-    <!-- Bootstrap CSS -->
+   
 
     <!-- Fontawesome -->
     <script
@@ -23,83 +23,136 @@
         <div class="register-image">
           <img src="images/signup-img.jpg" alt="" />
         </div>
+        <!-- <div>test</div> -->
         <div class="form-wrapper">
           <h3 class="form-title">STUDENT REGISTRATION FORM</h3>
-          <form action="test.php">
-            <div class="row flex">
-              <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" />
+          <!-- form cantainer -->
+          <div id="form-container">
+            <form id="registerForm">
+              <div class="row flex">
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="fatherName">Father Name:</label>
+                  <input type="text" id="fatherName" />
+                </div>
               </div>
-              <div class="form-group">
-                <label for="fatherName">Father Name:</label>
-                <input type="text" id="fatherName" />
-              </div>
-            </div>
 
-            <div class="form-group">
-              <label for="address">Address:</label>
-              <input type="text" id="address" />
-            </div>
-            <div class="gender-wrapper flex">
-              <div class="form-text">Gender:</div>
+              <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" />
+              </div>
+              <div class="gender-wrapper flex">
+                <div class="form-text">Gender:</div>
+
+                <div class="row flex">
+                  <input type="radio" id="male" name="gender" value="male" />
+                  <label for="male">Male</label>
+                </div>
+                <div class="row flex">
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                  />
+                  <label for="female">Female</label>
+                </div>
+              </div>
 
               <div class="row flex">
-                <input type="radio" id="male" name="gender" value="male" />
-                <label for="male">Male</label>
+                <div class="form-group">
+                  <label for="state">State:</label>
+                  <select name="" id="state">
+                    <option value=""></option>
+                    <option value="">America</option>
+                    <option value="">English</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="city">City:</label>
+                  <select name="" id="city">
+                    <option value=""></option>
+                    <option value="">Los Angeles</option>
+                    <option value="">Washington</option>
+                  </select>
+                </div>
               </div>
-              <div class="row flex">
-                <input type="radio" id="female" name="gender" value="female" />
-                <label for="female">Female</label>
-              </div>
-            </div>
 
-            <div class="row flex">
               <div class="form-group">
-                <label for="state">State:</label>
-                <select name="" id="state">
+                <label for="dob">DOB:</label>
+                <input type="text" name="" id="dob" />
+              </div>
+              <div class="form-group">
+                <label for="pincode">Pincode:</label>
+                <input type="text" name="" id="pincode" />
+              </div>
+
+              <div class="form-group">
+                <label for="course">Course:</label>
+                <select name="" id="course">
                   <option value=""></option>
-                  <option value="">America</option>
-                  <option value="">English</option>
+                  <option value="">Computer</option>
+                  <option value="">Design</option>
+                  <option value="">Marketing</option>
                 </select>
               </div>
               <div class="form-group">
-                <label for="city">City:</label>
-                <select name="" id="city">
-                  <option value=""></option>
-                  <option value="">Los Angeles</option>
-                  <option value="">Washington</option>
-                </select>
+                <label for="pincode">Email ID:</label>
+                <input type="mail" name="" id="mail" />
               </div>
-            </div>
+              <div class="button-group">
+                <button type="reset" class="btn secondary">Reset All</button>
+                <button type="submit" class="btn primary" id="submit">
+                  Submit Form
+                </button>
+              </div>
+            </form>
+           
+            <!-- Results -->
 
-            <div class="form-group">
-              <label for="dob">DOB:</label>
-              <input type="text" name="" id="dob" />
-            </div>
-            <div class="form-group">
-              <label for="pincode">Pincode:</label>
-              <input type="text" name="" id="pincode" />
-            </div>
+            <div class="result-wrapper" id="results">
 
-            <div class="form-group">
-              <label for="course">Course:</label>
-              <select name="" id="course">
-                <option value=""></option>
-                <option value="">Computer</option>
-                <option value="">Design</option>
-                <option value="">Marketing</option>
-              </select>
+              <form > 
+              <div class="result-text-wrapper">
+                <p>Name: <span id="nameResult"></span></p>
+              </div>
+              <div class="result-text-wrapper">
+                <p>Father Name: <span id="fatherResult"></span></p>
+              </div>
+              <div class="result-text-wrapper">
+                <p>Addres: <span id="addressResult"></span></p>
+              </div>
+              <div class="result-text-wrapper">
+                <p>Gender: <span id="genderResult"></span></p>
+              </div>
+              <div class="result-text-wrapper">
+                <p>State: <span id="stateResult"></span></p>
+              </div>
+              <div class="result-text-wrapper">
+                <p>City: <span id="cityResult"></span></p>
+              </div>
+              <div class="result-text-wrapper">
+                <p>DOB: <span id="dobResult"></span></p>
+              </div>
+              <div class="result-text-wrapper">
+                <p>Pincode: <span id="pincodeResult"></span></p>
+              </div>
+              <div class="result-text-wrapper">
+                <p>Course: <span id="courseResult"></span></p>
+              </div>
+              <div class="result-text-wrapper">
+                <p>EmailID: <span id="emailIdResult"></span></p>
+              </div>
+              <button id="back" type="reset" onClick="document.location.reload(true)" class="btn primary">
+                Reset All
+              </button>
             </div>
-            <div class="form-group">
-              <label for="pincode">Email ID:</label>
-              <input type="mail" name="" id="mail" />
-            </div>
-            <div class="button-group">
-              <button type="reset" class="btn secondary">Reset All</button>
-              <button type="submit" class="btn primary">Submit Form</button>
-            </div>
-          </form>
+            </form>
+            <!-- Results -->
+          </div>
         </div>
       </div>
     </div>
