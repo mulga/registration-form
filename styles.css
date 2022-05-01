@@ -22,10 +22,6 @@
   box-sizing: border-box;
 }
 
-html {
-  /* font-size: 10px; */
-}
-
 body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--color-dark);
@@ -38,11 +34,6 @@ img {
 .container {
   width: 100vw;
   height: 100vh;
-  /* display: grid; */
-  /* align-items: center; */
-  /* justify-items: center; */
-  /* margin: 0 auto; */
-  /* padding: 0 20px; */
 }
 
 .flex {
@@ -55,13 +46,13 @@ img {
   max-width: 1440px;
   margin: 50px auto 50px auto;
   display: grid;
+  /* display: flex; */
   grid-template-columns: 1fr 1fr;
   height: auto;
   background-color: var(--color-white);
 }
 
 .register-image img {
-  /* background-image: url(""); */
   height: auto;
 }
 
@@ -126,7 +117,6 @@ select:focus {
 .gender-wrapper.flex {
   align-items: center;
   gap: 15px;
-  /* justify-content: space-between; */
 }
 
 .button-group {
@@ -165,4 +155,32 @@ select:focus {
   .register-wrapper {
     grid-template-columns: 1fr;
   }
+}
+
+.result-wrapper {
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  display: none;
+}
+
+.result-text-wrapper {
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid var(--color-light);
+  padding: 1rem;
+  background-color: var(--color-light);
+}
+
+.result-text-wrapper p {
+  font-weight: 600;
+}
+
+.result-text-wrapper span {
+  font-weight: 400;
+}
+
+.result-wrapper button {
+  width: 100%;
 }
